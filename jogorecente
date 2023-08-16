@@ -1,0 +1,64 @@
+programa
+{
+	inclua biblioteca Texto
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		cadeia resposta
+
+
+
+
+escreva("░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ░██████╗░██╗░░░██╗░██████╗████████╗░█████╗░██╗░░░██╗░█████╗░\n")
+escreva("░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ██╔════╝░██║░░░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░██║██╔══██╗\n")
+escreva("░░░░░██║██║░░██║██║░░██╗░██║░░██║  ██║░░██║██║░░██║  ██║░░██╗░██║░░░██║╚█████╗░░░░██║░░░███████║╚██╗░██╔╝██║░░██║\n")
+escreva(" █╗░░██║██║░░██║██║░░╚██╗██║░░██║  ██║░░██║██║░░██║  ██║░░╚██╗██║░░░██║░╚═══██╗░░░██║░░░██╔══██║░╚████╔╝░██║░░██║\n")
+escreva("╚█████╔╝╚█████╔╝╚██████╔╝╚█████╔╝  ██████╔╝╚█████╔╝  ╚██████╔╝╚██████╔╝██████╔╝░░░██║░░░██║░░██║░░╚██╔╝░░╚█████╔╝\n")
+escreva("░╚════╝░░╚════╝░░╚═════╝░░╚════╝░  ╚═════╝░░╚════╝░  ░╚═════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░░░╚═╝░░░░╚════╝░\n")
+escreva("\n")
+escreva("░██████╗░██╗░░░██╗███████╗  ██████╗░███████╗██████╗░██████╗░███████╗██╗░░░██╗  ░█████╗░\n")
+escreva("██╔═══██╗██║░░░██║██╔════╝  ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝██║░░░██║  ██╔══██╗\n")
+escreva("██║██╗██║██║░░░██║█████╗░░  ██████╔╝█████╗░░██████╔╝██║░░██║█████╗░░██║░░░██║  ███████║\n")
+escreva("╚██████╔╝██║░░░██║██╔══╝░░  ██╔═══╝░██╔══╝░░██╔══██╗██║░░██║██╔══╝░░██║░░░██║  ██╔══██║\n")
+escreva("░╚═██╔═╝░╚██████╔╝███████╗  ██║░░░░░███████╗██║░░██║██████╔╝███████╗╚██████╔╝  ██║░░██║\n")
+escreva("░░░╚═╝░░░░╚═════╝░╚══════╝  ╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚.+══════╝░╚═════╝░  ╚═╝░░╚═╝\n")
+escreva("\n")
+escreva("██████╗░░█████╗░██╗░░░░░░█████╗░\n")
+escreva("██╔══██╗██╔══██╗██║░░░░░██╔══██╗\n")
+escreva("██████╦╝██║░░██║██║░░░░░███████║\n")
+escreva("██╔══██╗██║░░██║██║░░░░░██╔══██║\n")
+escreva("██████╦╝╚█████╔╝███████╗██║░░██║\n")
+escreva("╚═════╝░░╚════╝░╚══════╝╚═╝░░╚═╝\n\n\n\n\n")
+	u.aguarde(800)
+
+escreva("█████████████████████████████████████████████████████████████████████████████████████████\n")
+escreva("█▄─▄─▀██▀▄─██─▄▄▄▄█▄─▄▄─██▀▄─██▄─▄▄▀█─▄▄─███▄─▄▄─█▄─▀█▀─▄███▄─▄▄─██▀▄─██─▄─▄─█─▄▄─█─▄▄▄▄█\n")
+escreva("██─▄─▀██─▀─██▄▄▄▄─██─▄█▀██─▀─███─██─█─██─████─▄█▀██─█▄█─█████─▄████─▀─████─███─██─█▄▄▄▄─█\n")
+escreva("▀▄▄▄▄▀▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▀▀▄▄▄▄▀▀▀▄▄▄▄▄▀▄▄▄▀▄▄▄▀▀▀▄▄▄▀▀▀▄▄▀▄▄▀▀▄▄▄▀▀▄▄▄▄▀▄▄▄▄▄▀\n")
+escreva("█████████████████████████████████████\n")
+escreva("█▄─▄▄▀█▄─▄▄─██▀▄─██▄─▄█─▄▄▄▄█░█░█░█░█\n")
+escreva("██─▄─▄██─▄█▀██─▀─███─██▄▄▄▄─█▄█▄█▄█▄█\n")
+escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀▄▄▄▄▄▀▄▀▄▀▄▀▄▀\n")
+
+	u.aguarde(5000)
+	limpa()
+	
+		escreva("Zanette, Luigu, João Antonio e Gustavo estavam jogando bola em uma quadra. \n") u.aguarde(2000)
+escreva("Quando derrepente gustavo decide chutar a bola pra cima com tudo, \n") u.aguarde(2000)      
+escreva("mas ele chuta pra fora da quadra e a bola vai parar em uma floresta. \n") u.aguarde(2000)     
+escreva("Agora esse grupo tem que se aventurar floresta adentro para recuperar a bola perdida por gustavo. \n") u.aguarde(2000)                      
+	limpa()
+	escreva("FASE 1: A floresta do lado da quadra, a qual o gustavo jogou abola de maneira não intencional. \n\n\n")u.aguarde(2000)
+	escreva("(Luigu)-Eeeeee Gustavo, perdeu a bola. Que feio!\n")u.aguarde(2000)
+	escreva("(Zanette)-Eu acho que quem jogou tem que buscar... \n")u.aguarde(2000)
+	escreva("(Gustavo)-")
+	leia(resposta)
+	escreva("(Zanette)-Vamo geral buscar a bola, vai ser massa.\n")u.aguarde(2000)
+	escreva("(João Antonio)-Podem ir, eu não \"tô\" afim.\n")u.aguarde(2000)
+	escreva("(Luigu e Zanette)- Aaaa. Vamo logo\n")u.aguarde(2000)
+	escreva("Então nossos nada corajosos e honrados herois partiram rumo à floresta do lado da quadra, a qual o gustavo jogou abola de maneira não intencional.\n")u.aguarde(2000)
+	
+	 
+	}
+}
