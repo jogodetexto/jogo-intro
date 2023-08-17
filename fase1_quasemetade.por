@@ -8,8 +8,6 @@ programa
 		cadeia resposta=" ", opcao=" "
 		inteiro arma_gustavo=0, reias_gustavo=25, arma_zanette=0, reias_zanette=15, arma_luigu=0, reias_luigu=18
 
-	
-
 
 escreva("░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ░██████╗░██╗░░░██╗░██████╗████████╗░█████╗░██╗░░░██╗░█████╗░\n")
 escreva("░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ██╔════╝░██║░░░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░██║██╔══██╗\n")
@@ -59,7 +57,6 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 	limpa()
 	escreva("(Luigu)-Eeeeee Gustavo, perdeu a bola. Que feio!\n")u.aguarde(1500)
 	escreva("(Zanette)-Eu acho que quem jogou tem que buscar... \n")u.aguarde(1500)
-
 	enquanto(resposta!="Y" e resposta!="y" e resposta!="N" e resposta!="n"){
 		escreva("\nBuscar sozinho? (Y/N): ")
 		leia(resposta)
@@ -109,9 +106,9 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 					limpa()
 				} senao se(opcao=="2"){
 					limpa()
-					arma_gustavo=1
-					reias_gustavo-=8
-					escreva("Você escolheu a peixeira! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					arma_gustavo=2
+					reias_gustavo-=10
+					escreva("Você escolheu a faquinha de serra! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
 					escreva("(Gustavo)-Muito obrigado, moço!")u.aguarde(1000) escreva(" Agora \"tô\" com um cagaço de entrar nessa p#$%@ mas tudo bem...\n")u.aguarde(2000)
 					escreva("(Robertinho)-Boa sorte.")u.aguarde(2500)
 					limpa()
@@ -126,9 +123,9 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 					limpa()
 				} senao se(opcao=="3"){
 					limpa()
-					arma_gustavo=1
-					reias_gustavo-=8
-					escreva("Você escolheu a peixeira! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					arma_gustavo=3
+					reias_gustavo-=12
+					escreva("Você escolheu os dardos! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
 					escreva("(Gustavo)-Muito obrigado, moço!")u.aguarde(1000) escreva(" Agora \"tô\" com um cagaço de entrar nessa p#$%@ mas tudo bem...\n")u.aguarde(2000)
 					escreva("(Robertinho)-Boa sorte.")u.aguarde(2500)
 					limpa()
@@ -154,7 +151,7 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 			escreva("(Luigu)-Então, vai ser massa \"pra\" caramba.\n")u.aguarde(1500)
 			escreva("(João Antônio e Zanette)-Bora!")u.aguarde(2500)
 			limpa()
-			escreva("Então, nossos heróis nada corajosos foram para a floresta para procurarem a maldita bola!")u.aguarde(2000)
+			escreva("Então, nossos heróis nada corajosos foram para a floresta para procurarem a maldita bola!\n")u.aguarde(2000)
 			escreva("Eles observavam várias árvores tenebrosas...\n\n")u.aguarde(2000)
 			escreva("(João Antônio)-Que barulho é esse?\n")u.aguarde(2000)
 			escreva("(Luigu)-Parece alguém martelando algo...")u.aguarde(1000) escreva(" Vamos atrás deste barulho.\n")u.aguarde(1000)
@@ -163,7 +160,7 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 			escreva("(Gustavo)-Olá moço, como se chama?\n")u.aguarde(1500)
 			escreva("(Robertinho)-Opa, sou Robertinho. Procuram alguma coisa?\n")u.aguarde(2000)
 			escreva("(Gustavo)-Estamos procurando uma bola perdida.")u.aguarde(1000) escreva(" Por acaso você viu alguma por aí?\n")u.aguarde(1500)
-			escreva("(Robertinho)-Não, mas caso queiram procurar,")u.aguarde(1000) escreva" é melhor vocês comprarem armas, pois a floresta é perigosa!\n")u.aguarde(2000)
+			escreva("(Robertinho)-Não, mas caso queiram procurar,")u.aguarde(1000) escreva(" é melhor vocês comprarem armas, pois a floresta é perigosa!\n")u.aguarde(2000)
 			escreva("(Robertinho)-Dê uma olhada nas minhas opções.\n")u.aguarde(2000)
 			escreva("\n1 ||     Peixeira      || 8 reias\n")
 			escreva("Descrição: É meio lenta, mas dá 20 de dano. Você pode perder um round caso demore demais para conseguir atacar!")
@@ -188,10 +185,11 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 					escreva("Você escolheu a peixeira! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
 					limpa()
 					escreva("(Gustavo)-Eu comprei a peixeira. E vocês?\n")u.aguarde(2000)
-					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com",reias_luigu " reias.\n")u.aguarde(1000)
-					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele :c\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com ",reias_luigu, " reias.\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
 					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
 					escreva("(Todos)-AHAM.")u.aguarde(2000)
+					escreva("\n\nEntão, eles continuaram a jornada.")u.aguarde(2500)
 					limpa()
 					
 				} senao se(opcao=="2"){
@@ -206,10 +204,11 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 					escreva("Você escolheu a faquinha de serra! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
 					limpa()
 					escreva("(Gustavo)-Eu comprei a faquinha de serra. E vocês?\n")u.aguarde(2000)
-					escreva("(Luigu)-Eu peguei a peixeira. Fiquei com ",reias_luigu," reias\n")u.aguarde(1000)
-					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele :c\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a peixeira. Fiquei com ",reias_luigu," reias.\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
 					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
 					escreva("(Todos)-AHAM.")u.aguarde(2000)
+					escreva("\n\nEntão, eles continuaram a jornada.")u.aguarde(2500)
 					limpa()
 					
 				} senao se(opcao=="3"){
@@ -225,19 +224,18 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 					limpa()
 					escreva("(Gustavo)-Eu comprei os dardos. E vocês?\n")u.aguarde(2000)
 					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com ",reias_luigu," reias.\n")u.aguarde(1000)
-					escreva("(Zanette)-Eu comprei a peixeira. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele :c\n")u.aguarde(2000)
+					escreva("(Zanette)-Eu comprei a peixeira. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
 					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
 					escreva("(Todos)-AHAM.")u.aguarde(2000)
+					escreva("\n\nEntão, eles continuaram a jornada.")u.aguarde(2500)
 					limpa()
 
 					
 				} senao{
 					escreva("\n\nOpção inválida!\n\n")
 				}
-		}senao{
-			escreva("\n\nResposta inválida!\n\n")
 		}
 	}
-	 
+	}
 	}
 }
