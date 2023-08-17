@@ -6,7 +6,7 @@ programa
 	funcao inicio()
 	{
 		cadeia resposta=" ", opcao=" "
-		inteiro arma_gustavo=0, reias_gustavo=25
+		inteiro arma_gustavo=0, reias_gustavo=25, arma_zanette=0, reias_zanette=15, arma_luigu=0, reias_luigu=18
 
 	
 
@@ -78,7 +78,7 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 			escreva("(Robertinho)-Olá adolescente estranho, meu nome é Robertinho.")u.aguarde(1000) escreva(" No que posso ajudar?\n")u.aguarde(2500)
 			escreva("(Gustavo)-Obrigado pelo elogio.")u.aguarde(1000) escreva(" Estou procurando uma bola perdida. Por acaso você viu ela?\n")u.aguarde(2500)
 			escreva("(Robertinho)-Não.")u.aguarde(500)escreva(" Porém, se você for procurá-la nessa floresta, recomendo levar uma arma.")u.aguarde(1500)escreva(" Aqui é muito perigoso.\n")u.aguarde(2000)
-			escreva("(Robertinho)-Dê uma olhada nas minhas opções.\n")u.aguarde(1000)
+			escreva("(Robertinho)-Dê uma olhada nas minhas opções.\n")u.aguarde(2000)
 			escreva("\n1 ||     Peixeira      || 8 reias\n")
 			escreva("Descrição: É meio lenta, mas dá 20 de dano. Você pode perder um round caso demore demais para conseguir atacar!")
 			escreva("\n\n2 || Faquinha de serra || 10 reias\n")
@@ -155,7 +155,85 @@ escreva("▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀�
 			escreva("(João Antônio e Zanette)-Bora!")u.aguarde(2500)
 			limpa()
 			escreva("Então, nossos heróis nada corajosos foram para a floresta para procurarem a maldita bola!")u.aguarde(2000)
-			escreva("Eles observam várias árvores tenebrosas...")
+			escreva("Eles observavam várias árvores tenebrosas...\n\n")u.aguarde(2000)
+			escreva("(João Antônio)-Que barulho é esse?\n")u.aguarde(2000)
+			escreva("(Luigu)-Parece alguém martelando algo...")u.aguarde(1000) escreva(" Vamos atrás deste barulho.\n")u.aguarde(1000)
+			escreva("(Zanette)-Olha lá galera, uma barraquinha!\n\n")u.aguarde(2000)
+			escreva("O grupo chega perto da barraquinha e eles encontram um carinha...\n\n")u.aguarde(2000)
+			escreva("(Gustavo)-Olá moço, como se chama?\n")u.aguarde(1500)
+			escreva("(Robertinho)-Opa, sou Robertinho. Procuram alguma coisa?\n")u.aguarde(2000)
+			escreva("(Gustavo)-Estamos procurando uma bola perdida.")u.aguarde(1000) escreva(" Por acaso você viu alguma por aí?\n")u.aguarde(1500)
+			escreva("(Robertinho)-Não, mas caso queiram procurar,")u.aguarde(1000) escreva" é melhor vocês comprarem armas, pois a floresta é perigosa!\n")u.aguarde(2000)
+			escreva("(Robertinho)-Dê uma olhada nas minhas opções.\n")u.aguarde(2000)
+			escreva("\n1 ||     Peixeira      || 8 reias\n")
+			escreva("Descrição: É meio lenta, mas dá 20 de dano. Você pode perder um round caso demore demais para conseguir atacar!")
+			escreva("\n\n2 || Faquinha de serra || 10 reias\n")
+			escreva("Descrição: É leve e agil, dá 12 de dano. Você pode ganhar um round por causa da agilidade desta arma.")
+			escreva("\n\n3 ||     20 Dardos     || 12 reias\n")
+			escreva("Descrição: Você pode atacar um número randômico de 1 a 3 dardos por round. Cada dardo dá 8 de dano.")
+			escreva("\n\nGustavo vasculhou seu bolso e encontrou um cartão de débito com ",reias_gustavo," reias. \n")u.aguarde(1000)
+			escreva("Escolha uma arma com sabedoria, pois seu dinheiro pode ser útil para outras ocasiões...\n")u.aguarde(1000)
+			enquanto(opcao!="1" e opcao!="2" e opcao!="3"){
+				escreva("\nOpção (1, 2 ou 3): ")
+				leia(opcao)
+				se(opcao=="1"){
+					limpa()
+					arma_gustavo=1
+					reias_gustavo-=8
+					arma_luigu=2
+					reias_luigu-=10
+					arma_zanette=3
+					reias_zanette-=12
+					
+					escreva("Você escolheu a peixeira! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					limpa()
+					escreva("(Gustavo)-Eu comprei a peixeira. E vocês?\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com",reias_luigu " reias.\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele :c\n")u.aguarde(2000)
+					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
+					escreva("(Todos)-AHAM.")u.aguarde(2000)
+					limpa()
+					
+				} senao se(opcao=="2"){
+					limpa()
+					arma_gustavo=2
+					reias_gustavo-=10
+					arma_luigu=1
+					reias_luigu-=8
+					arma_zanette=3
+					reias_zanette-=12
+					
+					escreva("Você escolheu a faquinha de serra! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					limpa()
+					escreva("(Gustavo)-Eu comprei a faquinha de serra. E vocês?\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a peixeira. Fiquei com ",reias_luigu," reias\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele :c\n")u.aguarde(2000)
+					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
+					escreva("(Todos)-AHAM.")u.aguarde(2000)
+					limpa()
+					
+				} senao se(opcao=="3"){
+					limpa()
+					arma_gustavo=3
+					reias_gustavo-=12
+					arma_luigu=2
+					reias_luigu-=10
+					arma_zanette=1
+					reias_zanette-=8
+					
+					escreva("Você escolheu os dardos! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					limpa()
+					escreva("(Gustavo)-Eu comprei os dardos. E vocês?\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com ",reias_luigu," reias.\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei a peixeira. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele :c\n")u.aguarde(2000)
+					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
+					escreva("(Todos)-AHAM.")u.aguarde(2000)
+					limpa()
+
+					
+				} senao{
+					escreva("\n\nOpção inválida!\n\n")
+				}
 		}senao{
 			escreva("\n\nResposta inválida!\n\n")
 		}
