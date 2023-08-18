@@ -1,0 +1,28 @@
+programa
+{
+	inclua biblioteca Util
+ -->u
+	
+	funcao inicio()
+	{
+		cadeia resposta=" ", opcao=" ", boss=" ", opcao2=" "
+		inteiro arma_gustavo=0, reias_gustavo=25, arma_zanette=0, reias_zanette=15, arma_luigu=0, reias_luigu=18
+		inteiro vida_gustavo=100, vida_zanette=100, vida_antonio=100, vida_luigu=100, vida_preguica=200, sorteio_arma=0
+		inteiro dardos_gustavo=20, dardos_zanette=20, dardos_luigu=20
+
+			
+			
+			
+			
+			escreva("Fase 3: Um barulho muito suspeito vindo da escuridão causando muito medo.")u.aguarde(3000) //escrever fase 3 em ascii
+			limpa()
+			escreva("(Luigu)-A gente se ferrou, era só pra pegar a bola que o Gustavo perdeu.\n")u.aguarde(3000)
+			escreva("(Zanette)-É, complicado.\n")u.aguarde(3000)
+			escreva("(Gustavo)-Vocês tão ouvindo isso?\n")u.aguarde(3000)
+			escreva("Um barulho muito assustador(apenas barulho de folhas se mechendo)\n")u.aguarde(3000)
+			escreva("veio da escuridão(escuridão = moita )\n")u.aguarde(3000)
+			escreva("Inimigo aparece derrepente:")u.aguarde(3000)
+			escreva("MAGO NEGRO\n")u.aguarde(3000)  //escrever em ascii		
+			escreva("(Um cara aleatório muito bêbado)") u.aguarde(3000) 
+			limpa()
+			escreva("ELE JOGA UM GARRAFA DE COROTE ")
