@@ -2,14 +2,14 @@ programa
 {
 	inclua biblioteca Texto
 	inclua biblioteca Util --> u
-	cadeia resposta=" ", opcao=" ", boss=" ", opcao2=" "
-	inteiro arma_gustavo=0, reias_gustavo=25, arma_zanette=0, reias_zanette=15, arma_luigu=0, reias_luigu=18, reias_antonio=0
+	cadeia resposta=" ", opcao=" ", boss=" ", opcao2=" ", opcao_compra=" "
+	inteiro arma_gustavo=0, reais_gustavo=25, arma_zanette=0, reais_zanette=15, arma_luigu=0, reais_luigu=18, reais_antonio=0
 	inteiro vida_gustavo=100, vida_zanette=100, vida_antonio=100, vida_luigu=100, vida_preguica=200, sorteio_arma=0
 	inteiro dardos_gustavo=20, dardos_zanette=20, dardos_luigu=20
 	
 	funcao inicio()
 	{
-				escreva("░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ░██████╗░██╗░░░██╗░██████╗████████╗░█████╗░██╗░░░██╗░█████╗░\n")
+escreva("░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ░██████╗░██╗░░░██╗░██████╗████████╗░█████╗░██╗░░░██╗░█████╗░\n")
 escreva("░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ██╔════╝░██║░░░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░██║██╔══██╗\n")
 escreva("░░░░░██║██║░░██║██║░░██╗░██║░░██║  ██║░░██║██║░░██║  ██║░░██╗░██║░░░██║╚█████╗░░░░██║░░░███████║╚██╗░██╔╝██║░░██║\n")
 escreva(" █╗░░██║██║░░██║██║░░╚██╗██║░░██║  ██║░░██║██║░░██║  ██║░░╚██╗██║░░░██║░╚═══██╗░░░██║░░░██╔══██║░╚████╔╝░██║░░██║\n")
@@ -72,7 +72,6 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
 	limpa()
 	escreva("(Luigu)-Eeeeee Gustavo, perdeu a bola. Que feio!\n")u.aguarde(2500)
 	escreva("(Zanette)-Eu acho que quem jogou tem que buscar... \n")u.aguarde(2500)
-	
 
 
 
@@ -95,22 +94,22 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
 			escreva("(Gustavo)-Obrigado pelo elogio.")u.aguarde(1000) escreva(" Estou procurando uma bola perdida. Por acaso você viu ela?\n")u.aguarde(2500)
 			escreva("(Robertinho)-Não.")u.aguarde(500)escreva(" Porém, se você for procurá-la nessa floresta, recomendo levar uma arma.")u.aguarde(1500)escreva(" Aqui é muito perigoso.\n")u.aguarde(2000)
 			escreva("(Robertinho)-Dê uma olhada nas minhas opções.\n")u.aguarde(2000)
-			escreva("\n1 ||     Peixeira      || 8 reias\n")
+			escreva("\n1 ||     Peixeira      || 8 reais\n")
 			escreva("Descrição: É meio lenta, mas dá 20 de dano. Você pode perder um round caso demore demais para conseguir atacar!")
-			escreva("\n\n2 || Faquinha de serra || 10 reias\n")
+			escreva("\n\n2 || Faquinha de serra || 10 reais\n")
 			escreva("Descrição: É leve e agil, dá 12 de dano. Você pode ganhar um round por causa da agilidade desta arma.")
-			escreva("\n\n3 ||     20 Dardos     || 12 reias\n")
+			escreva("\n\n3 ||     20 Dardos     || 12 reais\n")
 			escreva("Descrição: Você pode atacar um número randômico de 1 a 3 dardos por round. Cada dardo dá 8 de dano.")
-			escreva("\n\nGustavo vasculhou seu bolso e encontrou um cartão de débito com ",reias_gustavo," reias. \n")u.aguarde(1000)
+			escreva("\n\nGustavo vasculhou seu bolso e encontrou um cartão de débito com ",reais_gustavo," reais. \n")u.aguarde(1000)
 			escreva("Escolha uma arma com sabedoria, pois seu dinheiro pode ser útil para outras ocasiões...\n")u.aguarde(1000)
-			enquanto(opcao!="1" e opcao!="2" e opcao!="3"){
+			enquanto(opcao_compra!="1" e opcao_compra!="2" e opcao_compra!="3"){
 				escreva("\nOpção (1, 2 ou 3): ")
-				leia(opcao)
-				se(opcao=="1"){
+				leia(opcao_compra)
+				se(opcao_compra=="1"){
 					limpa()
 					arma_gustavo=1
-					reias_gustavo-=8
-					escreva("Você escolheu a peixeira! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					reais_gustavo-=8
+					escreva("Você escolheu a peixeira! Você agora possui ",reais_gustavo," reais.\n\n")u.aguarde(2000)
 					dialogoSozinhoAposCompra()
 
 					
@@ -123,7 +122,7 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
 
 							
 							fuga()
-							
+							pare
 
 							
 						} senao se(opcao2=="N" ou opcao2=="n"){
@@ -150,11 +149,11 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
 						}
 				
 				
-				} senao se(opcao=="2"){
+				} senao se(opcao_compra=="2"){
 					limpa()
 					arma_gustavo=2
-					reias_gustavo-=10
-					escreva("Você escolheu a faquinha de serra! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					reais_gustavo-=10
+					escreva("Você escolheu a faquinha de serra! Você agora possui ",reais_gustavo," reais.\n\n")u.aguarde(2000)
 					dialogoSozinhoAposCompra()
 
 					enquanto(opcao2!="S" e opcao2!="s" e opcao2!="N" e opcao2!="n"){
@@ -193,11 +192,11 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
 						}
 				
 					
-				} senao se(opcao=="3"){
+				} senao se(opcao_compra=="3"){
 					limpa()
 					arma_gustavo=3
-					reias_gustavo-=12
-					escreva("Você escolheu os dardos! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					reais_gustavo-=12
+					escreva("Você escolheu os dardos! Você agora possui ",reais_gustavo," reais.\n\n")u.aguarde(2000)
 					dialogoSozinhoAposCompra()
 
 					enquanto(opcao2!="S" e opcao2!="s" e opcao2!="N" e opcao2!="n"){
@@ -260,77 +259,180 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
 			escreva("(Gustavo)-Estamos procurando uma bola perdida.")u.aguarde(1000) escreva(" Por acaso você viu alguma por aí?\n")u.aguarde(1500)
 			escreva("(Robertinho)-Não, mas caso queiram procurar,")u.aguarde(1000) escreva(" é melhor vocês comprarem armas, pois a floresta é perigosa!\n")u.aguarde(2000)
 			escreva("(Robertinho)-Dê uma olhada nas minhas opções.\n")u.aguarde(2000)
-			escreva("\n1 ||     Peixeira      || 8 reias\n")
+			escreva("\n1 ||     Peixeira      || 8 reais\n")
 			escreva("Descrição: É meio lenta, mas dá 20 de dano. Você pode perder um round caso demore demais para conseguir atacar!")
-			escreva("\n\n2 || Faquinha de serra || 10 reias\n")
+			escreva("\n\n2 || Faquinha de serra || 10 reais\n")
 			escreva("Descrição: É leve e agil, dá 12 de dano. Você pode ganhar um round por causa da agilidade desta arma.")
-			escreva("\n\n3 ||     20 Dardos     || 12 reias\n")
+			escreva("\n\n3 ||     20 Dardos     || 12 reais\n")
 			escreva("Descrição: Você pode atacar um número randômico de 1 a 3 dardos por round. Cada dardo dá 8 de dano.")
-			escreva("\n\nGustavo vasculhou seu bolso e encontrou um cartão de débito com ",reias_gustavo," reias. \n")u.aguarde(1000)
+			escreva("\n\nGustavo vasculhou seu bolso e encontrou um cartão de débito com ",reais_gustavo," reais. \n")u.aguarde(1000)
 			escreva("Escolha uma arma com sabedoria, pois seu dinheiro pode ser útil para outras ocasiões...\n")u.aguarde(1000)
-			enquanto(opcao!="1" e opcao!="2" e opcao!="3"){
+			enquanto(opcao_compra!="1" e opcao_compra!="2" e opcao_compra!="3"){
 				escreva("\nOpção (1, 2 ou 3): ")
-				leia(opcao)
-				se(opcao=="1"){
+				leia(opcao_compra)
+				se(opcao_compra=="1"){
 					limpa()
 					arma_gustavo=1
-					reias_gustavo-=8
+					reais_gustavo-=8
 					arma_luigu=2
-					reias_luigu-=10
+					reais_luigu-=10
 					arma_zanette=3
-					reias_zanette-=12
+					reais_zanette-=12
 					
-					escreva("Você escolheu a peixeira! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					escreva("Você escolheu a peixeira! Você agora possui ",reais_gustavo," reais.\n\n")u.aguarde(2000)
 					limpa()
 					escreva("(Gustavo)-Eu comprei a peixeira. E vocês?\n")u.aguarde(2000)
-					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com ",reias_luigu, " reias.\n")u.aguarde(1000)
-					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com ",reais_luigu, " reais.\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reais_zanette," reais.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
 					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
 					escreva("(Todos)-AHAM.")u.aguarde(2000)
 
-
 					dialogoJuntosAposCompra()
+					
 
+					enquanto(opcao2!="S" e opcao2!="s" e opcao2!="N" e opcao2!="n"){
+					escreva("Fugir? (S/N): ")
+					leia(opcao2)
+					limpa()
+					}
+						se(opcao2=="s" ou opcao2=="S"){
+
+							
+							fuga()
+							pare
+
+							
+						} senao se(opcao2=="N" ou opcao2=="n"){
+							enquanto(vida_preguica>0){
+									ataquePreguica()
+									ataqueGustavo()
+									ataqueZanette()
+									ataqueLuigu()
+									ataqueAntonio()
+									limpa()
+									se(vida_preguica<=0){
+										escreva("Vida da Preguiça Gigante: Nenhuma!!!\n")u.aguarde(500)
+									} senao{
+										escreva("Vida da Preguiça Gigante: ",vida_preguica,".\n")u.aguarde(500)
+									}
+									escreva("Vida do Gustavo: ",vida_gustavo,".\n")u.aguarde(500)
+									escreva("Vida do Zanette: ",vida_zanette,".\n")u.aguarde(500)
+									escreva("Vida do Luigu: ",vida_luigu,".\n")u.aguarde(500)
+									escreva("Vida do João Antônio: ",vida_antonio,".\n")u.aguarde(500)
+									escreva("\n\nFugir? (S/N): ")
+									leia(opcao)
+									se(opcao=="S" ou opcao=="s"){
+										fuga()
+										pare
+									}
+									limpa()
+								
+							}
+							se(opcao!="s" e opcao!="S"){								
+								limpa()u.aguarde(2000)
+								win()u.aguarde(4000)
+								limpa()u.aguarde(1000)
+								reais_luigu+=50 reais_zanette+=50 reais_gustavo+=50 reais_antonio+=50
+								escreva("Depois da épica batalha,")u.aguarde(1500) escreva(" o grupo avança...\n")u.aguarde(3000)
+								escreva("Todo mundo ganhou 50 reais!!!\n\n")u.aguarde(2500)
+							
+								faseFim()
+
+								pare
+							}
+					}
 					
 					
-				} senao se(opcao=="2"){
+				} senao se(opcao_compra=="2"){
 					limpa()
 					arma_gustavo=2
-					reias_gustavo-=10
+					reais_gustavo-=10
 					arma_luigu=1
-					reias_luigu-=8
+					reais_luigu-=8
 					arma_zanette=3
-					reias_zanette-=12
+					reais_zanette-=12
 					
-					escreva("Você escolheu a faquinha de serra! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					escreva("Você escolheu a faquinha de serra! Você agora possui ",reais_gustavo," reais.\n\n")u.aguarde(2000)
 					limpa()
 					escreva("(Gustavo)-Eu comprei a faquinha de serra. E vocês?\n")u.aguarde(2000)
-					escreva("(Luigu)-Eu peguei a peixeira. Fiquei com ",reias_luigu," reias.\n")u.aguarde(1000)
-					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a peixeira. Fiquei com ",reais_luigu," reais.\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei os dardos. Fiquei com ",reais_zanette," reais.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
 					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
 					escreva("(Todos)-AHAM.")u.aguarde(2000)
 
 
 					dialogoJuntosAposCompra()
+
+					enquanto(opcao2!="S" e opcao2!="s" e opcao2!="N" e opcao2!="n"){
+					escreva("Fugir? (S/N): ")
+					leia(opcao2)
+					limpa()
+					}
+						se(opcao2=="s" ou opcao2=="S"){
+
+							
+							fuga()
+							pare
+
+							
+						} senao se(opcao2=="N" ou opcao2=="n"){
+							enquanto(vida_preguica>0){
+
+									ataquePreguica()
+									ataqueGustavo()
+									ataqueZanette()
+									ataqueLuigu()
+									ataqueAntonio()
+									limpa()
+									se(vida_preguica<=0){
+										escreva("Vida da Preguiça Gigante: Nenhuma!!!\n")u.aguarde(500)
+									} senao{
+										escreva("Vida da Preguiça Gigante: ",vida_preguica,".\n")u.aguarde(500)
+									}
+									escreva("Vida do Gustavo: ",vida_gustavo,".\n")u.aguarde(500)
+									escreva("Vida do Zanette: ",vida_zanette,".\n")u.aguarde(500)
+									escreva("Vida do Luigu: ",vida_luigu,".\n")u.aguarde(500)
+									escreva("Vida do João Antônio: ",vida_antonio,".\n")u.aguarde(500)
+									escreva("\n\nFugir? (S/N): ")
+									leia(opcao)
+									se(opcao=="S" ou opcao=="s"){
+										fuga()
+										pare
+									}
+									limpa()
+								
+							}
+							se(opcao!="s" e opcao!="S"){								
+								limpa()u.aguarde(2000)
+								win()u.aguarde(4000)
+								limpa()u.aguarde(1000)
+								reais_luigu+=50 reais_zanette+=50 reais_gustavo+=50 reais_antonio+=50
+								escreva("Depois da épica batalha,")u.aguarde(1500) escreva(" o grupo avança...\n")u.aguarde(3000)
+								escreva("Todo mundo ganhou 50 reais!!!\n\n")u.aguarde(2500)
+							
+								faseFim()
+
+								pare
+							}
+					}
 					
 					
-				} senao se(opcao=="3"){
+				} senao se(opcao_compra=="3"){
 					limpa()
 					arma_gustavo=3
-					reias_gustavo-=12
+					reais_gustavo-=12
 					arma_luigu=2
-					reias_luigu-=10
+					reais_luigu-=10
 					arma_zanette=1
-					reias_zanette-=8
+					reais_zanette-=8
 					
-					escreva("Você escolheu os dardos! Você agora possui ",reias_gustavo," reias.\n\n")u.aguarde(2000)
+					escreva("Você escolheu os dardos! Você agora possui ",reais_gustavo," reais.\n\n")u.aguarde(2000)
 					limpa()
 					escreva("(Gustavo)-Eu comprei os dardos. E vocês?\n")u.aguarde(2000)
-					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com ",reias_luigu," reias.\n")u.aguarde(1000)
-					escreva("(Zanette)-Eu comprei a peixeira. Fiquei com ",reias_zanette," reias.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
+					escreva("(Luigu)-Eu peguei a faquinha de serra. Fiquei com ",reais_luigu," reais.\n")u.aguarde(1000)
+					escreva("(Zanette)-Eu comprei a peixeira. Fiquei com ",reais_zanette," reais.")u.aguarde(1000) escreva(" Tadinho do Jõao Antônio, sobrou nada \"pra\" ele.\n")u.aguarde(2000)
 					escreva("(João Antônio)-Eu me garanto no soco!\n")u.aguarde(2000)
 					escreva("(Todos)-AHAM.")u.aguarde(2000)
-					
 					
 					dialogoJuntosAposCompra()
 
@@ -347,34 +449,43 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
 
 							
 						} senao se(opcao2=="N" ou opcao2=="n"){
-							enquanto(vida_gustavo>0 ou vida_zanette>0 ou vida_luigu>0 ou vida_antonio>0 e vida_preguica>0){
-								ataquePreguica()
-								ataqueGustavo()
-								ataqueZanette()
-								ataqueLuigu()
-								ataqueAntonio()
-								limpa()
-								escreva("Vida da Preguiça Gigante: ", vida_preguica,".\n")u.aguarde(500)
-								escreva("Vida do Gustavo: ",vida_gustavo,".\n")u.aguarde(500)
-								escreva("Vida do Zanette: ",vida_zanette,".\n")u.aguarde(500)
-								escreva("Vida do Luigu: ",vida_luigu,".\n")u.aguarde(500)
-								escreva("Vida do João Antônio: ",vida_antonio,".\n")u.aguarde(500)
-								escreva("\n\nFugir? (S/N): ")
-								leia(opcao)
-								se(opcao=="S" ou opcao=="s"){
-									fuga()
-									pare
-								}
-								limpa()
+							enquanto(vida_preguica>0){
+									ataquePreguica()
+									ataqueGustavo()
+									ataqueZanette()
+									ataqueLuigu()
+									ataqueAntonio()
+									limpa()
+									se(vida_preguica<=0){
+										escreva("Vida da Preguiça Gigante: Nenhuma!!!\n")u.aguarde(500)
+									} senao{
+										escreva("Vida da Preguiça Gigante: ",vida_preguica,".\n")u.aguarde(500)
+									}
+									escreva("Vida do Gustavo: ",vida_gustavo,".\n")u.aguarde(500)
+									escreva("Vida do Zanette: ",vida_zanette,".\n")u.aguarde(500)
+									escreva("Vida do Luigu: ",vida_luigu,".\n")u.aguarde(500)
+									escreva("Vida do João Antônio: ",vida_antonio,".\n")u.aguarde(500)
+									escreva("\n\nFugir? (S/N): ")
+									leia(opcao)
+									se(opcao=="S" ou opcao=="s"){
+										fuga()
+										pare
+									}
+									limpa()
+								
 							}
-							limpa()u.aguarde(2000)
-							win()u.aguarde(4000)
-							limpa()u.aguarde(1000)
-							reias_luigu+=50 reias_zanette+=50 reias_gustavo+=50 reias_antonio+=50
-							escreva("Depois da épica batalha,")u.aguarde(1500) escreva(" o grupo avança...")u.aguarde(3000)
-							escreva("Todo mundo ganhou 50 reias!!!")u.aguarde(2500)
+							se(opcao!="s" e opcao!="S"){								
+								limpa()u.aguarde(2000)
+								win()u.aguarde(4000)
+								limpa()u.aguarde(1000)
+								reais_luigu+=50 reais_zanette+=50 reais_gustavo+=50 reais_antonio+=50
+								escreva("Depois da épica batalha,")u.aguarde(1500) escreva(" o grupo avança...\n")u.aguarde(3000)
+								escreva("Todo mundo ganhou 50 reais!!!\n\n")u.aguarde(2500)
 							
-							faseFim()
+								faseFim()
+
+								pare
+							}
 						} senao{
 							escreva("\n\nOpção inválida!\n\n")
 						}
@@ -447,78 +558,78 @@ boss=" na Preguiça Gigante!"
 	funcao ataqueGustavo(){
 		se(arma_gustavo==1){
 
-			escreva("Vez do Gustavo!\n")u.aguarde(2000)
+			escreva("Vez do Gustavo!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1, 2)
 			se(sorteio_arma==1){
 				vida_preguica-=20
-				escreva("Gustavo causou 20 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Gustavo causou 20 de dano",boss,"\n\n")u.aguarde(2000)
 			} senao{
-				escreva("Gustavo demorou demais para atacar! Perdeu a vez!\n\n")u.aguarde(3000)
+				escreva("Gustavo demorou demais para atacar! Perdeu a vez!\n\n")u.aguarde(2000)
 			}
 			
 		}
 		se(arma_gustavo==2){
 
-			escreva("Vez do Gustavo!\n")u.aguarde(2000)
+			escreva("Vez do Gustavo!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1, 2)
 			se(sorteio_arma==1){
 				vida_preguica-=12
-				escreva("Gustavo atacou apenas uma vez e causou 12 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Gustavo atacou apenas uma vez e causou 12 de dano",boss,"\n\n")u.aguarde(2000)
 			} senao{
 				vida_preguica-=24
-				escreva("Gustavo foi ágil e atacou duas vezes! Causou 24 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Gustavo foi ágil e atacou duas vezes! Causou 24 de dano",boss,"\n\n")u.aguarde(2000)
 			}
 			
 		}
 		se(arma_gustavo==3 e dardos_gustavo>=0){
 			
-			escreva("Vez do Gustavo!\n")u.aguarde(2000)
+			escreva("Vez do Gustavo!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1,3)
 			se(sorteio_arma==1 e dardos_gustavo>=1){
 				
 				vida_preguica-=8
-				escreva("Gustavo atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Gustavo atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_gustavo-=1
-				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==2 e dardos_gustavo>=2){
 				
 				vida_preguica-=16
-				escreva("Gustavo atacou 2 dardos e causou 16 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Gustavo atacou 2 dardos e causou 16 de dano",boss,"\n")
 				dardos_gustavo-=2
-				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==2 e dardos_gustavo==1){
 				
 				vida_preguica-=8
-				escreva("Gustavo atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Gustavo atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_gustavo-=1
-				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_gustavo>=3){
 				
 				vida_preguica-=24
-				escreva("Gustavo atacou 3 dardos e causou 24 de dano",boss," BRUTAL!\n")u.aguarde(3000)
+				escreva("Gustavo atacou 3 dardos e causou 24 de dano",boss," BRUTAL!\n")
 				dardos_gustavo-=3
-				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_gustavo==2){
 
 				vida_preguica-=16
-				escreva("Gustavo atacou 2 dardos e causou 16 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Gustavo atacou 2 dardos e causou 16 de dano",boss,"\n")
 				dardos_gustavo-=2
-				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_gustavo==1){
 
 				vida_preguica-=8
-				escreva("Gustavo atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Gustavo atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_gustavo-=1
-				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_gustavo,".\n\n")u.aguarde(3000)
 				
 			} senao se(dardos_gustavo==0){
 				
-				escreva("Os dardos do Gustavo acabaram!\n\n")u.aguarde(3000)
+				escreva("Os dardos do Gustavo acabaram!\n\n")u.aguarde(2000)
 				
 			} 
 			
@@ -527,78 +638,78 @@ boss=" na Preguiça Gigante!"
 	funcao ataqueZanette(){
 		se(arma_zanette==1){
 
-			escreva("Vez do Zanette!\n")u.aguarde(2000)
+			escreva("Vez do Zanette!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1, 2)
 			se(sorteio_arma==1){
 				vida_preguica-=20
-				escreva("Zanette causou 20 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Zanette causou 20 de dano",boss,"\n\n")u.aguarde(2000)
 			} senao{
-				escreva("Zanette demorou demais para atacar! Perdeu a vez!\n\n")u.aguarde(3000)
+				escreva("Zanette demorou demais para atacar! Perdeu a vez!\n\n")u.aguarde(2000)
 			}
 			
 		}
 		se(arma_zanette==2){
 
-			escreva("Vez do Zanette!\n")u.aguarde(2000)
+			escreva("Vez do Zanette!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1, 2)
 			se(sorteio_arma==1){
 				vida_preguica-=12
-				escreva("Zanette atacou apenas uma vez e causou 12 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Zanette atacou apenas uma vez e causou 12 de dano",boss,"\n\n")u.aguarde(2000)
 			} senao{
 				vida_preguica-=24
-				escreva("Zanette foi ágil e atacou duas vezes! Causou 24 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Zanette foi ágil e atacou duas vezes! Causou 24 de dano",boss,"\n\n")u.aguarde(2000)
 			}
 			
 		}
 		se(arma_zanette==3 e dardos_zanette>=0){
 			
-			escreva("Vez do Zanette!\n")u.aguarde(2000)
+			escreva("Vez do Zanette!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1,3)
 			se(sorteio_arma==1 e dardos_zanette>=1){
 				
 				vida_preguica-=8
-				escreva("Zanette atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Zanette atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_zanette-=1
-				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==2 e dardos_zanette>=2){
 				
 				vida_preguica-=16
-				escreva("Zanette atacou 2 dardos e causou 16 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Zanette atacou 2 dardos e causou 16 de dano",boss,"\n")
 				dardos_zanette-=2
-				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==2 e dardos_zanette==1){
 				
 				vida_preguica-=8
-				escreva("Zanette atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Zanette atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_zanette-=1
-				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_zanette>=3){
 				
 				vida_preguica-=24
-				escreva("Zanette atacou 3 dardos e causou 24 de dano",boss," BRUTAL!\n")u.aguarde(3000)
+				escreva("Zanette atacou 3 dardos e causou 24 de dano",boss," BRUTAL!\n")
 				dardos_zanette-=3
-				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_zanette==2){
 
 				vida_preguica-=16
-				escreva("Zanette atacou 2 dardos e causou 16 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Zanette atacou 2 dardos e causou 16 de dano",boss,"\n")
 				dardos_zanette-=2
-				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_zanette==1){
 
 				vida_preguica-=8
-				escreva("Zanette atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Zanette atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_zanette-=1
-				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_zanette,".\n\n")u.aguarde(3000)
 				
 			} senao se(dardos_zanette==0){
 				
-				escreva("Os dardos do Zanette acabaram!\n\n")u.aguarde(3000)
+				escreva("Os dardos do Zanette acabaram!\n\n")u.aguarde(2000)
 				
 			} 
 			
@@ -647,78 +758,78 @@ boss=" na Preguiça Gigante!"
 
 	se(arma_luigu==1){
 
-			escreva("Vez do Luigu!\n")u.aguarde(2000)
+			escreva("Vez do Luigu!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1, 2)
 			se(sorteio_arma==1){
 				vida_preguica-=20
-				escreva("Luigu causou 20 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Luigu causou 20 de dano",boss,"\n\n")u.aguarde(2000)
 			} senao{
-				escreva("Luigu demorou demais para atacar! Perdeu a vez!\n\n")u.aguarde(3000)
+				escreva("Luigu demorou demais para atacar! Perdeu a vez!\n\n")u.aguarde(2000)
 			}
 			
 		}
 		se(arma_luigu==2){
 
-			escreva("Vez do Luigu!\n")u.aguarde(2000)
+			escreva("Vez do Luigu!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1, 2)
 			se(sorteio_arma==1){
 				vida_preguica-=12
-				escreva("Luigu atacou apenas uma vez e causou 12 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Luigu atacou apenas uma vez e causou 12 de dano",boss,"\n\n")u.aguarde(2000)
 			} senao{
 				vida_preguica-=24
-				escreva("Luigu foi ágil e atacou duas vezes! Causou 24 de dano",boss,"\n\n")u.aguarde(3000)
+				escreva("Luigu foi ágil e atacou duas vezes! Causou 24 de dano",boss,"\n\n")u.aguarde(2000)
 			}
 			
 		}
-		se(arma_zanette==3 e dardos_luigu>=0){
+		se(arma_luigu==0 e dardos_luigu>=0){
 			
-			escreva("Vez do Luigu!\n")u.aguarde(2000)
+			escreva("Vez do Luigu!\n")u.aguarde(1500)
 			sorteio_arma=u.sorteia(1,3)
 			se(sorteio_arma==1 e dardos_luigu>=1){
 				
 				vida_preguica-=8
-				escreva("Luigu atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Luigu atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_luigu-=1
-				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==2 e dardos_luigu>=2){
 				
 				vida_preguica-=16
-				escreva("Luigu atacou 2 dardos e causou 16 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Luigu atacou 2 dardos e causou 16 de dano",boss,"\n")
 				dardos_luigu-=2
-				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==2 e dardos_luigu==1){
 				
 				vida_preguica-=8
-				escreva("Luigu atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Luigu atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_luigu-=1
-				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_luigu>=3){
 				
 				vida_preguica-=24
-				escreva("Luigu atacou 3 dardos e causou 24 de dano",boss," BRUTAL!\n")u.aguarde(3000)
+				escreva("Luigu atacou 3 dardos e causou 24 de dano",boss," BRUTAL!\n")
 				dardos_luigu-=3
-				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_luigu==2){
 
 				vida_preguica-=16
-				escreva("Luigu atacou 2 dardos e causou 16 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Luigu atacou 2 dardos e causou 16 de dano",boss,"\n")
 				dardos_luigu-=2
-				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(3000)
 				
 			} senao se(sorteio_arma==3 e dardos_luigu==1){
 
 				vida_preguica-=8
-				escreva("Luigu atacou apenas 1 dardo e causou 8 de dano",boss,"\n")u.aguarde(3000)
+				escreva("Luigu atacou apenas 1 dardo e causou 8 de dano",boss,"\n")
 				dardos_luigu-=1
-				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(2500)
+				escreva("Dardos restantes: ",dardos_luigu,".\n\n")u.aguarde(3000)
 				
-			} senao se(dardos_zanette==0){
+			} senao se(dardos_luigu==0){
 				
-				escreva("Os dardos do Luigu acabaram!\n\n")u.aguarde(3000)
+				escreva("Os dardos do Luigu acabaram!\n\n")u.aguarde(2000)
 				
 			} 
 			
@@ -750,7 +861,7 @@ escreva("FF:::::::FF           II::::::IIM::::::M               M::::::M        
 escreva("F::::::::FF           I::::::::IM::::::M               M::::::M                d:::::::::::::::::d e::::::::eeeeeeee  \n")
 escreva("F::::::::FF           I::::::::IM::::::M               M::::::M                 d:::::::::ddd::::d  ee:::::::::::::e  \n")
 escreva("FFFFFFFFFFF           IIIIIIIIIIMMMMMMMM               MMMMMMMM                  ddddddddd   ddddd    eeeeeeeeeeeeee  \n")
-escreva("                                                                                                                   	  \n")
+escreva("                                                                                                                   	  \n")u.aguarde(1500)
 escreva("                                                                                                                      \n")
 escreva("                                                                                                                      \n")
 escreva("                                                                                                                      \n")
@@ -774,7 +885,7 @@ escreva("  F:::::F        A:::::AAAAAAAAAAAAA:::::A               S:::::S  E::::
 escreva("FF:::::::FF     A:::::A             A:::::A  SSSSSSS     S:::::SEE::::::EEEEEEEE:::::E                                \n")
 escreva("F::::::::FF    A:::::A               A:::::A S::::::SSSSSS:::::SE::::::::::::::::::::E                                \n")
 escreva("F::::::::FF   A:::::A                 A:::::AS:::::::::::::::SS E::::::::::::::::::::E                                \n")
-escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE                                \n")
+escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE                                \n")u.aguarde(2000)
                                                                                                                       
                                                                                                                       
                                                                                                                       
@@ -784,13 +895,13 @@ escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEE
                                                                                                                       
 	}
 	funcao win(){
-escreva("                             ,---. ")
-escreva(",--.   ,--.,--.,--.  ,--.    |   | ")
-escreva("|  |   |  ||  ||  ,'.|  |    |  .' ")
-escreva("|  |.'.|  ||  ||  |' '  |    |  |  ")
-escreva("|   ,'.   ||  ||  | `   |    `--'  ")
-escreva("'--'   '--'`--'`--'  `--'    .--.  ")
-escreva("                             '--'  ")
+escreva("                             ,---. \n")
+escreva(",--.   ,--.,--.,--.  ,--.    |   | \n")
+escreva("|  |   |  ||  ||  ,'.|  |    |  .' \n")
+escreva("|  |.'.|  ||  ||  |' '  |    |  |  \n")
+escreva("|   ,'.   ||  ||  | `   |    `--'  \n")
+escreva("'--'   '--'`--'`--'  `--'    .--.  \n")
+escreva("                             '--'  \n")
 	}
 	funcao faseFim(){
 escreva("                                                                                          dddddddd                    \n")
@@ -810,7 +921,7 @@ escreva("FF:::::::FF           II::::::IIM::::::M               M::::::M        
 escreva("F::::::::FF           I::::::::IM::::::M               M::::::M                d:::::::::::::::::d e::::::::eeeeeeee  \n")
 escreva("F::::::::FF           I::::::::IM::::::M               M::::::M                 d:::::::::ddd::::d  ee:::::::::::::e  \n")
 escreva("FFFFFFFFFFF           IIIIIIIIIIMMMMMMMM               MMMMMMMM                  ddddddddd   ddddd    eeeeeeeeeeeeee  \n")
-escreva("                                                                                                                   	  \n")
+escreva("                                                                                                                   	  \n")u.aguarde(1500)
 escreva("                                                                                                                      \n")
 escreva("                                                                                                                      \n")
 escreva("                                                                                                                      \n")
@@ -834,6 +945,6 @@ escreva("  F:::::F        A:::::AAAAAAAAAAAAA:::::A               S:::::S  E::::
 escreva("FF:::::::FF     A:::::A             A:::::A  SSSSSSS     S:::::SEE::::::EEEEEEEE:::::E                                \n")
 escreva("F::::::::FF    A:::::A               A:::::A S::::::SSSSSS:::::SE::::::::::::::::::::E                                \n")
 escreva("F::::::::FF   A:::::A                 A:::::AS:::::::::::::::SS E::::::::::::::::::::E                                \n")
-escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE                                \n")
+escreva("FFFFFFFFFFF  AAAAAAA                   AAAAAAASSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE                                \n")u.aguarde(2000)
 	}
 }
